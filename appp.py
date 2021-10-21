@@ -51,12 +51,12 @@ def main():
 
                 # Filename
                 img_filename = 'generate_image_{}.png'.format(timestr)
-                path_for_images = os.path.join(os.getcwd(),'image_folder', img_filename)
-                print(path_for_images)
-                #img.save(path_for_images)
+                #path_for_images = os.path.join(os.getcwd(),'image_folder', img_filename)
+                path_for_images = img_filename
+                img.save(path_for_images)
                 #cv2.imwrite(path_for_images,img)
-                final_img = img
-                #final_img = load_img(path_for_images)
+                
+                final_img = load_img(path_for_images)
                 st.image(final_img)
 
             with col2:
